@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "./components/navbar";
+import { ThemeProvider } from "./components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="side__StyledSideElement-sc-1wdt1ly-0 SLAQp">
+          <div className="email__StyledLinkWrapper-sc-148iwo6-0 hMFHbo fade-enter-done">
+            <a href="mailto:amanxbhatti@gmail.com">amanxbhatti@gmail.com</a>
+          </div>
+        </div>
+
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className="max-w-[1000px] mx-auto py-4 flex flex-col min-h-screen">
+            <Navbar />
+            {children}
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,312 @@
+#about {
+  max-width: 1000px;
+  min-height: 50vh;
+  margin: auto;
+  padding-top: 100px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  will-change: opacity;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.about-description ul {
+  padding-top: 20px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Add gap for spacing */
+}
+
+.about-description li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.about-description li::before {
+  content: "▹    ";
+  color: var(--green-bright);
+  position: absolute;
+  left: 0;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; /* Add gap for spacing between image and text */
+}
+
+.about-description {
+  font-family: "Roboto", monospace;
+  word-spacing: normal;
+  line-height: 1.5; /* Increase line-height for readability */
+  color: var(--slate);
+  max-width: 100%; /* Make sure it doesn't exceed the viewport width */
+  font-size: 20px;
+  word-spacing: -0.1em;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-align: justify;
+  margin: 0 auto; /* Center the text block */
+  padding: 0 15px; /* Add some padding to prevent text from touching the edges */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+@media (max-width: 900px) {
+  .about-image {
+    display: none;
+  }
+  .about-description {
+    padding: 1rem;
+  }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 18px; /* Adjust font size for better readability */
+    padding: 0 10px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-description {
+    font-size: 16px; /* Further adjust font size */
+    padding: 0 5px; /* Further adjust padding */
+  }
+}
+
+@media (max-width: 280px) {
+  .about-description {
+    font-size: 10px; /* Further adjust font size */
+    padding: 0; /* Further adjust padding */
+  }
+}
+
+.about-description a,
+.about-description b {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.about-image {
+  margin-right: 100px;
+  position: relative;
+}
+
+.about-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
+  border: none;
+  backface-visibility: hidden;
+  transition: 0.5s ease;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 788px) {
+  .about-image img {
+    max-width: 200px;
+  }
+}
+
+.about-image:hover img {
+  opacity: 0.3;
+  transform: translateY(-7px);
+}
+
+.about-image:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04aa6d;
+  color: var(--text-color);
+  font-size: 14px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  height: auto;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  top: 75%;
+  left: 54%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #about {
+    padding-top: 30%;
+  }
+
+  .about-description {
+    font-size: 18px;
+    text-align: justify;
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .about-description a,
+  .about-description b {
+    font-size: 17px;
+  }
+
+  .about-image img {
+    display: none;
+  }
+
+  .about-content {
+    display: unset;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
+
+.section-header {
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+.break {
+  height: 50px;
+}
+
+.section-title {
+  position: relative;
+  font-family: "Fira Code", monospace; /* Monospaced font for coding feel */
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  height: 2px;
+  flex-grow: 1;
+  margin: 0 20px;
+  background-color: var(--text-color);
+}
+
+.section-title::before {
+  margin-left: 0;
+}
+
+.section-title::after {
+  margin-right: 0;
+}
+
+.section-title span {
+  color: #61dafb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+.code-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align the tech cards */
+  text-align: center;
+  gap: 16px; /* Increased gap for better spacing */
+  margin-top: 24px; /* Increased margin for better separation */
+  padding: 0 15px; /* Add padding to ensure content does not touch the edges */
+}
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly increased shadow for hover effect */
+}
+
+.tech-icon {
+  width: 28px; /* Slightly increased size for better visibility */
+  height: 28px; /* Ensure height matches width */
+  margin-right: 12px; /* Increased margin for better spacing */
+  vertical-align: middle;
+}
+
+.techName {
+  font-size: 1rem; /* Standardize font size */
+  font-family: "Roboto Mono", monospace;
+  font-style: italic;
+  font-weight: 500; /* Slightly bolder font for emphasis */
+  color: #333333; /* Darker color for better readability */
+}
+
+.vertical-email {
+  position: fixed; /* or absolute if you prefer */
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%) rotate(-90deg);
+  transform-origin: left top;
+  background-color: blue;
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  writing-mode: vertical-lr;
+  text-align: center;
+  z-index: 1000; /* make sure it stays on top */
+}
+
+#paboutme {
+  margin-top: 12px;
+}

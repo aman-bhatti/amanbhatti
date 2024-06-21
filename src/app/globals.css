@@ -8,26 +8,111 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Light mode styles */
+.light {
+  --bg-color: white;
+  --text-color: black;
+  --nav-bg-color: #f3f4f6; /* Tailwind gray-100 */
+  --nav-text-color: #111827; /* Tailwind gray-900 */
 }
 
+/* Dark mode styles */
+.dark {
+  --bg-color: #1c1917;
+  --text-color: white;
+  --nav-bg-color: #1c1917;
+  --nav-text-color: #d1d5db;
+  --container-bg-color: #342f2d;
+}
+
+p,
+strong,
+li,
+.mb-2,
+a {
+  color: var(--text-color) !important;
+}
+
+/* Apply the colors to the body */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.max-w-\[712px\] {
+  max-width: 712px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.min-h-\[calc\(100vh-50px-100px\)\] {
+  min-height: calc(100vh - 50px - 100px);
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.SLAQp {
+  width: 40px;
+  position: fixed;
+  left: auto;
+  right: 40px;
+  z-index: 10;
+  bottom: 0;
+  color: var(--light-slate);
+}
+
+.hMFHbo {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.hMFHbo a:hover,
+.hMFHbo a:focus {
+  transform: translateY(-3px);
+  color: pink !important;
+}
+
+.hMFHbo a {
+  margin: 20px auto;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: var(--fz-lg);
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+}
+
+.hMFHbo::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--text-color);
 }
