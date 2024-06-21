@@ -116,3 +116,7 @@ body {
   margin: 0px auto;
   background-color: var(--text-color);
 }
+
+.transition-colors {
+  color: var(--bg-color) !important;
+}
