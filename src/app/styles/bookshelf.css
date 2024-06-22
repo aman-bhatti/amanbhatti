@@ -241,7 +241,6 @@
   text-overflow: ellipsis;
   font-size: 10px !important;
   margin-top: auto;
-  white-space: nowrap;
 }
 
 .top {

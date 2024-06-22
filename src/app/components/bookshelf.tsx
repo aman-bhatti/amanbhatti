@@ -58,7 +58,7 @@ const books: Book[] = [
   },
   {
     title: "Stories of Your Life and Others",
-    author: "TC",
+    author: "Ted Chiang",
     cover:
       "https://is5-ssl.mzstatic.com/image/thumb/Publication128/v4/b9/29/61/b92961a1-147f-c649-dc25-6c4e3a089b55/9781931520898.jpg/100000x100000-999.jpg",
     report: "",
@@ -70,7 +70,7 @@ const books: Book[] = [
   },
   {
     title: "Dune",
-    author: "FH",
+    author: "Frank Herbert",
     cover:
       "https://sarehlovasen.wordpress.com/wp-content/uploads/2021/10/img_5623.jpg?w=310",
     report: "",
@@ -87,7 +87,7 @@ const books: Book[] = [
   },
   {
     title: "The Alchemist",
-    author: "PC",
+    author: "Paulo Coelho",
     cover:
       "https://is5-ssl.mzstatic.com/image/thumb/Publication111/v4/5a/23/10/5a231085-a455-131c-8e1b-8d1331f6e5de/9780062416216_marketingimage.jpg/100000x100000-999.jpg",
     report: "template.md",
@@ -104,14 +104,14 @@ const books: Book[] = [
   },
   {
     title: "Norwegian Wood",
-    author: "HM",
+    author: "Haruki Murakami",
     cover:
       "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
     report: "",
   },
   {
     title: "The Song of Achillies",
-    author: "MM",
+    author: "Madeline Miller",
     cover:
       "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
     report: "",
