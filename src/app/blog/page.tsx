@@ -10,6 +10,7 @@ import {
 } from "../components/ui/card";
 import { getAllTags, sortPosts, sortTagsByCount } from "../../../lib/utils";
 import { Metadata } from "next";
+import "../styles/blog.css";
 
 export const metadata: Metadata = {
   title: "My blog",

@@ -41,7 +41,7 @@ const getRootCssStyles = (): string[] => {
 const books: Book[] = [
   {
     title: "1984",
-    author: "GO",
+    author: "George Orwell",
     cover:
       "https://149522020.v2.pressablecdn.com/wp-content/uploads/2017/01/2a34d8_a6741e88335241308890543d203ad89dmv2.jpg",
     report: "1984.md",
@@ -293,7 +293,7 @@ const Bookshelf: React.FC = () => {
           {selectedBook && (
             <div className="review-modal">
               <div className="review-content">
-                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                <ReactMarkdown className="prose " rehypePlugins={[rehypeRaw]}>
                   {reportContent}
                 </ReactMarkdown>
                 <button onClick={closeReview}>Close</button>

@@ -26,3 +26,7 @@
 .flex {
   display: flex;
 }
+
+.navbar-dark-text:hover {
+  color: var(--text-hover) !important;
+}

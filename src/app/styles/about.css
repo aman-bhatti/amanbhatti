@@ -289,7 +289,7 @@
   font-family: "Roboto Mono", monospace;
   font-style: italic;
   font-weight: 500; /* Slightly bolder font for emphasis */
-  color: #333333; /* Darker color for better readability */
+  color: #333333 !important; /* Darker color for better readability */
 }
 
 .vertical-email {

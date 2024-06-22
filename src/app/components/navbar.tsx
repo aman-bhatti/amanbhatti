@@ -15,6 +15,9 @@ const navItems = {
   "/about": {
     name: "about",
   },
+  "/guestbook": {
+    name: "guestbook",
+  },
 };
 
 export function Navbar() {
@@ -32,7 +35,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2"
+                  className="transition-all hover:text-neutral-600 focus:text-neutral-600 dark:hover:text-stone-500 dark:focus:text-stone-500 flex align-middle relative py-1 px-2"
                 >
                   {name}
                 </Link>

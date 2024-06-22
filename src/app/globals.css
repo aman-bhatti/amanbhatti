@@ -14,6 +14,9 @@
   --text-color: black;
   --nav-bg-color: #f3f4f6; /* Tailwind gray-100 */
   --nav-text-color: #111827; /* Tailwind gray-900 */
+  --container-bg-color: white;
+  /* Define color variables for HTML groups in light mode */
+  --h-color: black;
 }
 
 /* Dark mode styles */
@@ -23,13 +26,24 @@
   --nav-bg-color: #1c1917;
   --nav-text-color: #d1d5db;
   --container-bg-color: #342f2d;
+  --text-hover: #322f2e;
+
+  --h-color: white;
 }
 
-p,
+h1,
+h2,
+h3,
+p {
+  color: var(--h-color) !important;
+}
+
 strong,
 li,
 .mb-2,
-a {
+.username,
+.message,
+.timestamp {
   color: var(--text-color) !important;
 }
 
@@ -82,6 +96,19 @@ body {
   z-index: 10;
   bottom: 0;
   color: var(--light-slate);
+}
+
+@media (max-width: 1150px) {
+  .SLAQp {
+    left: 100%;
+    right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .SLAQp {
+    display: none;
+  }
 }
 
 .hMFHbo {

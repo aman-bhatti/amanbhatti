@@ -1,0 +1,104 @@
+/* Guestbook Container */
+.guestbook-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sign-In Button */
+.sign-in-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+  background-color: #0056b3;
+}
+
+/* Form */
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.guestbook-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.guestbook-form button {
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.guestbook-form button:hover {
+  background-color: #218838;
+}
+
+/* Message List */
+.message-list {
+  margin-top: 20px;
+}
+
+.message-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-item .username {
+  font-weight: bold;
+  color: #333;
+}
+
+.message-item .timestamp {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.message-item .message {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Sign-Out Button */
+.sign-out-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-out-button:hover {
+  background-color: #c82333;
+}
+.signinspan:hover {
+  text-decoration: underline !important;
+}

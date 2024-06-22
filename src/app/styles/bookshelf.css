@@ -236,9 +236,10 @@
   color: black;
   font-family: 1000;
   bottom: 0px;
-  left: 20%; /* no idea why 20% centers it */
+  left: 0%; /* no idea why 20% centers it */
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 10px !important;
   margin-top: auto;
   white-space: nowrap;
 }
@@ -271,13 +272,14 @@
 }
 
 .review-modal {
+  background-color: var(--container-bg-color);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
+  border: 3px black solid;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: black;
   z-index: 1000;
 }
 
