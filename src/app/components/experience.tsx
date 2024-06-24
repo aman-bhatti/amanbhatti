@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 interface ExperienceItem {
   title: string;
@@ -35,13 +35,24 @@ const experiences: ExperienceItem[] = [
 ];
 
 const Experience: React.FC = () => {
-  const [selectedExperience, setSelectedExperience] =
-    useState<ExperienceItem | null>(experiences[0]);
+  const [selectedExperience, setSelectedExperience] = useState<ExperienceItem | null>(null);
+
+  useEffect(() => {
+    // Set the latest experience as the selected experience on initial load
+    setSelectedExperience(experiences[0]);
+  }, []);
+
+  const springProps = useSpring({
+    opacity: 1,
+    transform: "translateY(0)",
+    from: { opacity: 0, transform: "translateY(20px)" },
+    reset: true,
+  });
 
   return (
-    <div id="experience" className="py-12 ">
+    <div id="experience" className="py-12">
       <div className="section-header">
-        <span className="section-title"> &#123;exerpience&#125; </span>
+        <span className="section-title"> &#123;experience&#125; </span>
       </div>
       <div className="break"></div>
 
@@ -60,31 +71,22 @@ const Experience: React.FC = () => {
           </ul>
         </aside>
         <main className="w-3/4 pl-4">
-          <AnimatePresence>
-            {selectedExperience && (
-              <motion.div
-                key={selectedExperience.title}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-              >
-                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
-                  {selectedExperience.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {selectedExperience.company}
-                </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {selectedExperience.duration}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mt-4">
-                  {selectedExperience.description}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {selectedExperience && (
+            <animated.div key={selectedExperience.title} style={springProps} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
+                {selectedExperience.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                {selectedExperience.company}
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                {selectedExperience.duration}
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 mt-4">
+                {selectedExperience.description}
+              </p>
+            </animated.div>
+          )}
         </main>
       </div>
     </div>

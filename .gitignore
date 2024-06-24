@@ -38,3 +38,5 @@ next-env.d.ts
 .velite
 
 .eslintrc.json
+
+.env.local

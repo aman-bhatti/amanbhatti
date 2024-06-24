@@ -9,9 +9,12 @@ import { ThemeProvider } from "./components/theme-provider";
 import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from "convex/react";
-import IntroAnimation from "./components/introanimation";
+import SplashScreen from "./components/introanimation";
+import { metadata } from "../../config/metadata";
+
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 const convex = new ConvexReactClient(
   process.env.NEXT_PUBLIC_CONVEX_URL as string,
@@ -33,13 +36,18 @@ export default function RootLayout({
   useEffect(() => {
     const timer = setTimeout(() => {
       handleIntroFinish();
-    }, 3000); // 3 seconds for the animation
+    }, 11000); // 3 seconds for the animation
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <html lang="en">
+      <head>
+        <title>Aman Bhatti</title>
+        <meta name='description' content='Description' />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/>
+      </head>
       <body className={inter.className}>
         <ClerkProvider publishableKey="pk_test_c2FjcmVkLXNreWxhcmstMjMuY2xlcmsuYWNjb3VudHMuZGV2JA">
           <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
@@ -51,7 +59,7 @@ export default function RootLayout({
             <ThemeProvider attribute="class" defaultTheme="light">
               <div className="max-w-[1000px] mx-auto py-4 flex flex-col min-h-screen">
                 {showIntro ? (
-                  <IntroAnimation onFinish={handleIntroFinish} />
+                  <SplashScreen  />
                 ) : (
                   <>
                     <Navbar />
