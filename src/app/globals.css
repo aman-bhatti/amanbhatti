@@ -147,3 +147,20 @@ body {
 .transition-colors {
   color: var(--bg-color) !important;
 }
+
+/* styles/globals.css */
+
+/* styles/globals.css */
+
+.hide-scroll-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+br {
+  height: 50px;
+}

@@ -37,7 +37,7 @@
 
 .about-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 20px; /* Add gap for spacing between image and text */
 }
@@ -96,7 +96,7 @@
 }
 
 .about-image {
-  margin-right: 100px;
+  margin-left: 100px;
   position: relative;
 }
 
@@ -190,8 +190,8 @@
 .section-title {
   position: relative;
   font-family: "Fira Code", monospace; /* Monospaced font for coding feel */
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 400;
   color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -200,7 +200,6 @@
   align-items: center;
 }
 
-.section-title::before,
 .section-title::after {
   content: "";
   height: 2px;

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "This is a description",
 };
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 10;
 
 interface BlogPageProps {
   searchParams: {
@@ -43,9 +43,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
           <h1 className="inline-block font-black text-4xl lg:text-5xl">Blog</h1>
-          <p className="text-xl text-muted-foreground">
-            My ramblings on all things web dev.
-          </p>
+          <p className="text-xl text-muted-foreground">these are my blogs.</p>
         </div>
       </div>
       <div className="grid grid-cols-12 gap-3 mt-8">
