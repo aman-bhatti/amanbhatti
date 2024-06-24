@@ -144,12 +144,6 @@ body {
   background-color: var(--text-color);
 }
 
-.transition-colors {
-  color: var(--bg-color) !important;
-}
-
-/* styles/globals.css */
-
 /* styles/globals.css */
 
 .hide-scroll-bar {
@@ -165,6 +159,7 @@ br {
   height: 50px;
 }
 
-.h-full{
+.h-full {
   background-color: #0000ad;
 }
+

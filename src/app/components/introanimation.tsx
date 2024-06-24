@@ -14,7 +14,7 @@ const SplashScreen: React.FC = () => {
 
     const terminalLines = [
       'Aman@Linux:~$ ./AmanBhatti.sh',
-      'Running AmanBhatti.sh...',
+      'Running...',
     ];
 
     const randomCodeLines = [
@@ -33,19 +33,16 @@ const SplashScreen: React.FC = () => {
 "BIOS-e820: [mem 0x0000000020200000-0x0000000040003fff] usable",
 "BIOS-e820: [mem 0x0000000040004000-0x0000000040004fff] reserved",
 "BIOS-e820: [mem 0x0000000040005000-0x00000000c9746fff] usable",
-"BIOS-e820: [mem 0x00000000c9747000-0x00000000c9d47fff] ACPI NVS",
-"BIOS-e820: [mem 0x00000000c9d48000-0x00000000c9d4afff] type 20",
-"BIOS-e820: [mem 0x00000000c9d4b000-0x00000000c9d60fff] usable",
-"BIOS-e820: [mem 0x00000000c9d61000-0x00000000c9d66fff] type 20",
-"BIOS-e820: [mem 0x00000000c9d67000-0x00000000c9d68fff] usable",
-"BIOS-e820: [mem 0x00000000c9d69000-0x00000000c9d72fff] type 20",
-"BIOS-e820: [mem 0x00000000c9d73000-0x00000000c9f06fff] usable",
-"BIOS-e820: [mem 0x00000000c9f07000-0x00000000c9f0afff] type 20",
-"BIOS-e820: [mem 0x00000000c9f0b000-0x00000000c9f53fff] usable",
-"BIOS-e820: [mem 0x00000000c9f54000-0x00000000c9f5afff] type 20",
-"BIOS-e820: [mem 0x00000000c9f5b000-0x00000000c9f67fff] reserved",
-"BIOS-e820: [mem 0x00000000c9f68000-0x00000000c9f79fff] type 20",
-"BIOS-e820: [mem 0x00000000c9f7a000-0x00000000c9f7cfff] usable",
+"BIOS-e820: [mem 0x0000000000100000-0x000000001fffffff] usable",
+"BIOS-e820: [mem 0x0000000020000000-0x00000000201fffff] reserved",
+"BIOS-e820: [mem 0x0000000020200000-0x0000000040003fff] usable",
+"BIOS-e820: [mem 0x0000000040004000-0x0000000040004fff] reserved",
+"BIOS-e820: [mem 0x0000000040005000-0x00000000c9746fff] usable",
+"BIOS-e820: [mem 0x0000000000100000-0x000000001fffffff] usable",
+"BIOS-e820: [mem 0x0000000020000000-0x00000000201fffff] reserved",
+"BIOS-e820: [mem 0x0000000020200000-0x0000000040003fff] usable",
+"BIOS-e820: [mem 0x0000000040004000-0x0000000040004fff] reserved",
+"BIOS-e820: [mem 0x0000000040005000-0x00000000c9746fff] usable",
 "Initializing website....",
       // Add more random lines as needed
     ];
@@ -71,13 +68,13 @@ const SplashScreen: React.FC = () => {
     const startTyping = async () => {
       for (const line of terminalLines) {
         setLines((prevLines) => [...prevLines, '']);
-        await typeLine(line, 100);
+        await typeLine(line, 50);
       }
 
       for (let i = 0; i < randomCodeLines.length; i++) {
         const randomIndex = Math.floor(Math.random() * randomCodeLines.length);
         setLines((prevLines) => [...prevLines, randomCodeLines[randomIndex]]);
-        await new Promise((resolve) => setTimeout(resolve, 100)); // delay for fast printing
+        await new Promise((resolve) => setTimeout(resolve, 70)); // delay for fast printing
         if (containerRef.current) {
           containerRef.current.scrollTop = containerRef.current.scrollHeight;
         }
