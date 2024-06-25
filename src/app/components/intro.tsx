@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Typewriter from "typewriter-effect";
+import Contact from "./contact";
+import Link from "next/link";
 
 const Info: React.FC = () => {
   return (
@@ -33,6 +35,9 @@ const Info: React.FC = () => {
                   deleteSpeed: 50,
                 }}
               />
+              <Link className="text-2xl font-bold text-blue-500 hover:text-blue-700" href="/contact">
+  Contact Me!
+</Link>
             </div>
           </div>
         </div>

@@ -57,6 +57,12 @@ body {
   color: var(--text-color);
 }
 
+@media (max-width: 600px){
+  body{
+    padding: 1rem;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

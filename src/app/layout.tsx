@@ -13,6 +13,7 @@ import Link from "next/link";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Footer from "./footer/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -98,6 +99,7 @@ export default function RootLayout({
             </ThemeProvider>
           </ConvexProviderWithClerk>
         </ClerkProvider>
+        <Footer/>
       </body>
     </html>
   );

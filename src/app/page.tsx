@@ -4,6 +4,7 @@ import { ModeToggle } from "./components/theme-toggle";
 import Experience from "./components/experience";
 import Info from "./components/intro";
 import Projects from "./projects/page";
+import Footer from "./footer/page";
 
 export default function Home() {
   return (
