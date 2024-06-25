@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
 
 interface ExperienceItem {
@@ -35,12 +35,31 @@ const experiences: ExperienceItem[] = [
 ];
 
 const Experience: React.FC = () => {
-  const [selectedExperience, setSelectedExperience] = useState<ExperienceItem | null>(null);
+  const [selectedExperience, setSelectedExperience] =
+    useState<ExperienceItem | null>(null);
+  const [highlightTop, setHighlightTop] = useState(0);
+  const listItemRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
-    // Set the latest experience as the selected experience on initial load
-    setSelectedExperience(experiences[0]);
+    // Ensure refs are set before trying to calculate highlight position
+    const timeoutId = setTimeout(() => {
+      setSelectedExperience(experiences[0]);
+    }, 0);
+
+    return () => clearTimeout(timeoutId);
   }, []);
+
+  useEffect(() => {
+    if (selectedExperience && listItemRefs.current.length) {
+      const index = experiences.findIndex(
+        (experience) => experience.title === selectedExperience.title,
+      );
+      const selectedItem = listItemRefs.current[index];
+      if (selectedItem) {
+        setHighlightTop(selectedItem.offsetTop);
+      }
+    }
+  }, [selectedExperience, listItemRefs.current]);
 
   const springProps = useSpring({
     opacity: 1,
@@ -57,22 +76,40 @@ const Experience: React.FC = () => {
       <div className="break"></div>
 
       <div className="container mx-auto px-4 flex">
-        <aside className="w-1/4 pr-4">
+        <aside className="w-1/4 pr-4 relative sidebar">
           <ul className="space-y-4">
             {experiences.map((experience, index) => (
               <li
                 key={index}
+                ref={(el) => {
+                  listItemRefs.current[index] = el;
+                }}
                 onClick={() => setSelectedExperience(experience)}
-                className={`cursor-pointer p-4 rounded-lg ${selectedExperience?.title === experience.title ? "bg-blue-500 text-white" : "bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100"}`}
+                className={`cursor-pointer p-4 rounded-lg ripple ${
+                  selectedExperience?.title === experience.title
+                    ? " text-white"
+                    : "text-gray-800 dark:text-gray-100"
+                }`}
               >
                 {experience.title}
               </li>
             ))}
           </ul>
+          <div
+            className="highlight-line"
+            style={{
+              height: `${listItemRefs.current[0]?.clientHeight || 0}px`,
+              top: `${highlightTop}px`,
+            }}
+          ></div>
         </aside>
         <main className="w-3/4 pl-4">
           {selectedExperience && (
-            <animated.div key={selectedExperience.title} style={springProps} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <animated.div
+              key={selectedExperience.title}
+              style={springProps}
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+            >
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
                 {selectedExperience.title}
               </h3>
@@ -94,3 +131,4 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
+

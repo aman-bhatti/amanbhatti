@@ -9,6 +9,10 @@ import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from "convex/react";
 import SplashScreen from "./components/introanimation";
+import Link from "next/link";
+import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +36,7 @@ export default function RootLayout({
   useEffect(() => {
     const timer = setTimeout(() => {
       handleIntroFinish();
-    }, 7000); // 1 second for the animation
+    }); // 1 second for the animation
 
     return () => clearTimeout(timer);
   }, []);
@@ -51,16 +55,45 @@ export default function RootLayout({
                 <a href="mailto:amanxbhatti@gmail.com">amanxbhatti@gmail.com</a>
               </div>
             </div>
+            <div className="side__StyledSideElement-sc-1wdt1ly-0 knAFTJ">
+              <ul className="social__StyledSocialList-sc-1aeyc4d-0 jKwTmL fade-enter-done">
+                <li className="social-icons">
+                  <a
+                    id="mail"
+                    className="navRight"
+                    href="mailto:amanxbhatti@gmail.com"
+                  >
+                    <EmailRoundedIcon
+                      style={{ fontSize: 25 }}
+                    ></EmailRoundedIcon>
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    className="navRight"
+                    href="https://github.com/aman-bhatti"
+                    id="gh"
+                    target="_blank"
+                  >
+                    <GitHubIcon style={{ fontSize: 25 }}></GitHubIcon>
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/aman-ibhatti/"
+                    className="navRight"
+                    target="_blank"
+                    id="in"
+                  >
+                    <LinkedInIcon style={{ fontSize: 25 }}></LinkedInIcon>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <ThemeProvider attribute="class" defaultTheme="light">
               <div className="max-w-[1000px] mx-auto py-4 flex flex-col min-h-screen">
-                {showIntro ? (
-                  <SplashScreen />
-                ) : (
-                  <>
-                    <Navbar />
-                    {children}
-                  </>
-                )}
+                <Navbar />
+                {children}
               </div>
             </ThemeProvider>
           </ConvexProviderWithClerk>

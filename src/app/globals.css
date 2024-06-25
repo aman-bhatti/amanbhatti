@@ -15,7 +15,7 @@
   --nav-bg-color: #f3f4f6; /* Tailwind gray-100 */
   --nav-text-color: #111827; /* Tailwind gray-900 */
   --container-bg-color: white;
-  /* Define color variables for HTML groups in light mode */
+  --text-desc: #737373;
   --h-color: black;
 }
 
@@ -27,8 +27,12 @@
   --nav-text-color: #d1d5db;
   --container-bg-color: #342f2d;
   --text-hover: #322f2e;
-
+  --text-desc: #737373;
   --h-color: white;
+}
+
+.proj-desc {
+  color: var(--text-desc) !important;
 }
 
 h1,
@@ -88,6 +92,76 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.social-icons {
+  border-radius: 5px;
+  text-align: center;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.knAFTJ {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: var(--light-slate);
+}
+.jKwTmL li a {
+  padding-bottom: 0px;
+}
+
+.jKwTmL li a {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons:hover::before {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.social-icons:hover {
+  background-color: yellow;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons:hover {
+  background-color: var(--blueColorColor);
+}
+
+#in:hover {
+  background-color: #0077b5 !important;
+
+  color: black !important;
+}
+
+#gh:hover {
+  color: white !important;
+  background-color: #333 !important;
+}
+#mail:hover {
+  background-color: lightgrey !important;
+}
+#ld:hover {
+  color: black;
+  background-color: blue !important;
+}
+
 .SLAQp {
   width: 40px;
   position: fixed;
@@ -100,13 +174,18 @@ body {
 
 @media (max-width: 1150px) {
   .SLAQp {
-    left: 100%;
-    right: 20px;
+    display: none;
+  }
+  .knAFTJ {
+    display: none;
   }
 }
 
 @media (max-width: 600px) {
   .SLAQp {
+    display: none;
+  }
+  .knAFTJ {
     display: none;
   }
 }
@@ -134,8 +213,8 @@ body {
   letter-spacing: 0.1em;
   writing-mode: vertical-rl;
 }
-
-.hMFHbo::after {
+.hMFHbo::after,
+.knAFTJ::after {
   content: "";
   display: block;
   width: 1px;
@@ -159,7 +238,35 @@ br {
   height: 50px;
 }
 
-.h-full {
-  background-color: #0000ad;
+hr {
+  box-sizing: border-box;
+  line-height: 1.5;
 }
 
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-line {
+  position: absolute;
+  right: -2px;
+  width: 4px;
+  background-color: var(--text-desc); /* Tailwind CSS blue-500 color */
+  transition: top 0.3s ease;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #737373 radial-gradient(circle, transparent 1%, #737373 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #322f2e;
+  background-size: 100%;
+  transition: background 0s;
+}
