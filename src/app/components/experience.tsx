@@ -7,30 +7,52 @@ interface ExperienceItem {
   title: string;
   company: string;
   duration: string;
-  description: string;
+  description: string | JSX.Element;
 }
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Software Engineer",
-    company: "Tech Company A",
-    duration: "Jan 2020 - Present",
-    description:
-      "Worked on developing scalable web applications using React and Node.js. Led a team of 5 developers to build a customer relationship management system that increased efficiency by 30%.",
+    title: "Test/Research Engineer",
+    company: "Early Startup Company",
+    duration: "Jan 2024 - May 2024",
+    description: (
+      <ul>
+        <li>
+          • Part of a research project on identifying early presence of
+          Alzheimer’s disease using machine learning techniques.
+        </li>
+        <li>
+          • Played a pivotal role in securing vital research information on
+          patients with AD in regards to analyzing data, identifying patterns
+          and refining and testing algorithms for the optimal performance.
+        </li>
+        <li>
+          • Mainly focused on research initiatives that explored applications of
+          AI and machine learning in terms of healthcare.
+        </li>
+      </ul>
+    ),
   },
   {
-    title: "Frontend Developer",
-    company: "Web Solutions B",
-    duration: "Jun 2018 - Dec 2019",
-    description:
-      "Developed and maintained user interfaces for e-commerce websites. Collaborated with designers to create a seamless user experience, resulting in a 20% increase in user engagement.",
-  },
-  {
-    title: "Intern",
-    company: "Startup C",
-    duration: "Jan 2018 - May 2018",
-    description:
-      "Assisted in the development of a mobile application using React Native. Gained hands-on experience with Agile methodologies and version control systems.",
+    title: "Data Analyst Intern",
+    company: "Nuasin Charter School ",
+    duration: "Oct 2020 - May 2021",
+    description: (
+      <ul>
+        <li>
+          • Managed and analyzed the educational system database, extracting
+          insights on student behaviors and usage patterns with school-issued
+          Chromebooks; methodically documented anomalies and trends for informed
+          decision-making.
+        </li>
+        <li>
+          • Provided data-driven recommendations to address technical issues
+          faced by students and staff, leveraging analytical tools to diagnose
+          and predict recurrent problems, optimizing the educational experience
+          through proactive measures.
+        </li>
+      </ul>
+    ),
   },
 ];
 
@@ -108,7 +130,7 @@ const Experience: React.FC = () => {
             <animated.div
               key={selectedExperience.title}
               style={springProps}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+              className="experience-container p-6 rounded-lg shadow-md"
             >
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
                 {selectedExperience.title}
@@ -131,4 +153,3 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
-

@@ -20,12 +20,7 @@ const one = (
     understanding of databases, web development, and DevOps.
   </p>
 );
-const two = (
-  <p id="paboutme">
-    Outside of work, I'm interested in following the developments of science. I
-    also play a lot of video games. And make TikToks.
-  </p>
-);
+const two = <p id="paboutme"></p>;
 const About: React.FC = () => {
   return (
     <Reveal>

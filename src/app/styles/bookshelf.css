@@ -280,10 +280,22 @@
   border: 3px black solid;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  max-width: 90%; /* Ensures modal doesn't exceed viewport width */
+  max-height: 80%; /* Ensures modal doesn't exceed viewport height */
+  overflow-y: auto; /* Adds scroll for overflow content vertically */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-family: "Lora", serif; /* Applying the font to the modal */
+}
+
+@media (max-width: 600px) {
+  .review-modal {
+    max-width: 1000px !important; /* Increases the width slightly */
+    max-height: 85%; /* Increases the height slightly */
+  }
 }
 
 .review-content {
-  max-width: 500px;
+  word-wrap: break-word; /* Ensures long words are wrapped to the next line */
 }
 
 .review-modal button {
@@ -300,14 +312,13 @@
 }
 
 .section-header-books {
-  margin: auto;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
-  margin-top: 100px; /* Adjust this value as needed to avoid overlap */
+  margin-top: 70px; /* Adjust this value as needed to avoid overlap */
 }
 
 .break {
@@ -382,4 +393,8 @@
 
 .red-text {
   color: red;
+}
+
+.book-review-heading {
+  font-family: "Merriweather Sans", sans-serif;
 }

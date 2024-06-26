@@ -110,76 +110,40 @@ const books: Book[] = [
     report: "",
   },
   {
-    title: "The Song of Achillies",
+    title: "The Song of Achilles",
     author: "Madeline Miller",
     cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
-    report: "",
-  },
-  {
-    title: "The Song of Achillies",
-    author: "MM",
-    cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
+      "https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/8d/b1/fd/8db1fd98-753b-1975-6e83-c2668263b4e4/9780062060631.jpg/100000x100000-999.jpg",
     report: "",
   },
   {
     title: "The Silent Patient",
-    author: "AM",
+    author: "Alex Michae...",
     cover:
       "https://is5-ssl.mzstatic.com/image/thumb/Publication124/v4/71/24/e9/7124e956-9924-4424-64bc-09cbf082a04a/9781250301710.jpg/100000x100000-999.jpg",
     report: "",
   },
   // Add more books with URLs, reports, and spine styles here
+];
+
+const books2023: Book[] = [
+  {
+    title: "Book Title 2023",
+    author: "Author Name",
+    cover: "https://example.com/book-cover-2023.jpg",
+    report: "",
+    spineTitleStyles: {
+      color: "black",
+      fontSize: "20px",
+      fontFamily: "serif",
+    },
+    spineAuthorStyles: {
+      color: "black",
+      fontSize: "16px",
+      fontFamily: "sans-serif",
+    },
+  },
+  // Add more books as needed
 ];
 
 const Bookshelf: React.FC = () => {
@@ -251,62 +215,96 @@ const Bookshelf: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
-      <div id="books">
-        <div className="section-header-books">
-          <span className="section-title-books"> &#123;books&#125; </span>
-        </div>
-        <p className="!text-gray-400 mt-4">
-          click on a book for my review on it!
-        </p>
-        <div className="bookshelf-container">
-          <h2 className="font-black mt-2">2024</h2>
+      <div className="section-header-books">
+        <span className="section-title-books"> &#123;books&#125; </span>
+      </div>
+      <p className="!text-gray-400 mt-4">
+        click on a book for my review on it!
+      </p>
+      <div className="bookshelf-container">
+        <h2 className="font-black mt-2">2024</h2>
 
-          <div className="bookshelf">
-            {books.map((book, index) => (
+        <div className="bookshelf">
+          {books.map((book, index) => (
+            <div
+              className="book"
+              key={index}
+              onClick={() => handleBookClick(book)}
+            >
+              <div className="side spine">
+                <span
+                  className={`spine-title ${
+                    book.spineTitleStyles ? "" : "spine-title"
+                  }`}
+                  style={book.spineTitleStyles || {}}
+                >
+                  {book.title}
+                </span>
+                <span
+                  className={`spine-author ${
+                    book.spineAuthorStyles ? "" : "spine-author"
+                  }`}
+                  style={book.spineAuthorStyles || {}}
+                >
+                  {book.author}
+                </span>
+              </div>
+              <div className="side top"></div>
               <div
-                className="book"
-                key={index}
-                onClick={() => handleBookClick(book)}
-              >
-                <div className="side spine">
-                  <span
-                    className={`spine-title ${
-                      book.spineTitleStyles ? "" : "spine-title"
-                    }`}
-                    style={book.spineTitleStyles || {}}
-                  >
-                    {book.title}
-                  </span>
-                  <span
-                    className={`spine-author ${
-                      book.spineAuthorStyles ? "" : "spine-author"
-                    }`}
-                    style={book.spineAuthorStyles || {}}
-                  >
-                    {book.author}
-                  </span>
-                </div>
-                <div className="side top"></div>
-                <div
-                  className="side cover"
-                  style={{ backgroundImage: `url(${book.cover})` }}
-                ></div>
-              </div>
-            ))}
-          </div>
-          <hr />
-
-          {selectedBook && (
-            <div className="review-modal">
-              <div className="review-content">
-                <ReactMarkdown className="prose " rehypePlugins={[rehypeRaw]}>
-                  {reportContent}
-                </ReactMarkdown>
-                <button onClick={closeReview}>Close</button>
-              </div>
+                className="side cover"
+                style={{ backgroundImage: `url(${book.cover})` }}
+              ></div>
             </div>
-          )}
+          ))}
         </div>
+        <hr />
+
+        <h2 className="font-black mt-4">2023</h2>
+        <div className="bookshelf">
+          {books2023.map((book, index) => (
+            <div
+              className="book"
+              key={index}
+              onClick={() => handleBookClick(book)}
+            >
+              <div className="side spine">
+                <span
+                  className={`spine-title ${
+                    book.spineTitleStyles ? "" : "spine-title"
+                  }`}
+                  style={book.spineTitleStyles || {}}
+                >
+                  {book.title}
+                </span>
+                <span
+                  className={`spine-author ${
+                    book.spineAuthorStyles ? "" : "spine-author"
+                  }`}
+                  style={book.spineAuthorStyles || {}}
+                >
+                  {book.author}
+                </span>
+              </div>
+              <div className="side top"></div>
+              <div
+                className="side cover"
+                style={{ backgroundImage: `url(${book.cover})` }}
+              ></div>
+            </div>
+          ))}
+        </div>
+        <hr />
+
+        {selectedBook && (
+          <div className="review-modal">
+            <div className="review-content">
+              <ReactMarkdown className="prose " rehypePlugins={[rehypeRaw]}>
+                {reportContent}
+              </ReactMarkdown>
+              <button onClick={closeReview}>Close</button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

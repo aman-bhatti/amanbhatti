@@ -1,7 +1,7 @@
 import { posts } from "#site/content";
 import { MDXContent } from "../../components/mdx-components";
 import { notFound } from "next/navigation";
-
+import Link from "next/link";
 import "../../styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "../../../../config/site";
@@ -73,6 +73,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
+      <Link href={"/blog"} className="hover:underline text-neutral-500">
+        ↵ back
+      </Link>
       <h1 className="mb-2">{post.title}</h1>
       <div className="flex gap-2 mb-2">
         {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
