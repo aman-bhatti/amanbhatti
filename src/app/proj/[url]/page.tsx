@@ -4,11 +4,6 @@ import { Reveal } from "../../../../lib/fade";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Kane Lariviere | Works",
-  description: "Kane Lariviere • Software Developer • Works",
-};
-
 import { RxArrowTopRight } from "react-icons/rx";
 
 interface Work {
@@ -142,29 +137,8 @@ export default async function WorksPage({
               </span>
             </div>
           </div>
-
-          {/* <div>
-                <div className="font-light mt-12">
-                  <span className="font-medium tracking-wide text-xl">More Info</span>
-                  <p className="blog text-sm mt-4">
-                    {paragraphs.map((paragraph, index) => (
-                      <p key={index} className="mb-4">{paragraph}</p>
-                    ))}
-                  </p>
-                </div>
-              </div> */}
         </div>
       </Reveal>
-
-      {/* <Reveal>
-            <div className="pt-24 pb-12 flex md:justify-end justify-center">
-              <Link href={`${projects?.next}`}
-                className="group flex items-center space-x-2 w-fit">
-                <span className="group-hover:underline underline-offset-4 transition-colors duration-100 font-light text-sm">{projects?.nextTitle}</span>
-                <RxArrowRight className="text-lg group-hover:translate-x-2 duration-100" />
-              </Link>
-            </div>
-          </Reveal> */}
     </div>
   );
 }
@@ -172,9 +146,9 @@ export default async function WorksPage({
 export async function generateStaticParams() {
   return [
     { url: "taskware" },
-    { url: "ttrpc" },
-    { url: "theskyisfake" },
-    { url: "abstract" },
+    { url: "algorithms" },
+    { url: "infinitecats" },
+    { url: "cryptography" },
     { url: "templateportfolio" },
     { url: "personalportfolio" },
   ];
@@ -183,86 +157,70 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
-    studico: {
-      url: "studico",
+    taskware: {
+      url: "taskware",
       brand: {
-        src: "../../../../public/images/nw.jpg",
-        alt: "studico logo",
+        src: "/images/taskware.png",
+        alt: "",
         width: 1000,
         height: 1000,
         className: "w-full h-full",
       },
-      git: "https://github.com/knlrvr/studico",
-      live: "https://studico.vercel.app/",
-      title: "Studico",
-      category: "Music Production",
+      git: "https://github.com/aman-bhatti/taskware",
+      live: "",
+      title: "Taskware",
+      category: "Full Stack",
       overview:
-        "Studico is a web-based music production assistance suite that empowers users to create, collaborate, and share their music. Studico offers a robust tracking system for various aspects of music production, including tasks, file upload and storage, and messaging. Studico is meant for small to medium-sized teams, and allows them to have everything they need in one place.",
-      tags: [
-        "TypeScipt",
-        "React",
-        "Next.js",
-        "Tailwind",
-        "shadcn/ui",
-        "Convex",
-        "Clerk",
-      ],
-      year: "2024 ~",
+        "Created Taskware, a powerful task management web application, utilizing Python, MySQLdb, Flask, Heroku, HTML, CSS, and Javascript, resulting in an easy-to-use interface for managing tasks, assigning tasks to team members, and tracking progress. Built the core functionality utilizing Python and Flask; designed the database schema and wrote server-side code, leading to a seamless integration of the frontend with the backend for improved application performance.",
+      tags: ["Python (Flask)", "MySQL", "HTML", "CSS", "JavaScript", "Heroku"],
+      year: "2022 ~",
       more: "",
-      next: "/proj/ttrpc",
-      nextTitle: "TTRPCompanion",
+      next: "",
+      nextTitle: "",
     },
 
-    ttrpc: {
-      url: "ttrpc",
+    algorithms: {
+      url: "algorithms",
       brand: {
-        src: "/brand/ttrpc-brand-new.png",
-        alt: "ttrpc logo",
+        src: "/images/sorting.png",
+        alt: "",
         width: 1000,
         height: 1000,
         className: "w-full h-full",
       },
-      git: "https://github.com/knlrvr/ttrpc",
-      live: "https://ttrpc.vercel.app/",
-      title: "TTRPCompanion",
-      category: "Gaming Utility",
+      git: "https://github.com/aman-bhatti/sortingAlgoVisualizer",
+      live: "",
+      title: "Sorting Algorithms Visualizer",
+      category: "Python",
       overview:
-        "TTRPCompanion is a gaming utility app that allows users to track their character's stats in D&D or other TTRPG Campaigns. Typically, other available tools weigh on the very basic stats of characters like total HP, ability scores, etc. while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character. Previous version built with tRPC, Prisma, NextAuth, & Supabase.",
-      tags: [
-        "TypeScipt",
-        "React",
-        "Next.js",
-        "Tailwind",
-        "Convex",
-        "Clerk",
-        "Jest",
-      ],
+        "Python project using the tkinter module that allows you to visualize numerours sorting algoirthms in real time.",
+      tags: ["Python", "Tkinter"],
       year: "2023 ~",
       more: "",
-      next: "/proj/theskyisfake",
-      nextTitle: "The Sky Is Fake",
+      next: "",
+      nextTitle: "",
     },
 
-    theskyisfake: {
-      url: "theskyisfake",
+    infinitecats: {
+      url: "infinitecats",
       brand: {
-        src: "/brand/tsif-brand-new.png",
-        alt: "The Sky Is Fake",
+        src: "/images/infinitecats.jpg",
+        alt: "Infinite Cats",
         width: 1000,
         height: 1000,
         className: "w-full h-full",
       },
-      git: "https://github.com/knlrvr/theskyisfake",
-      live: "https://www.theskyisfake.org",
-      title: "The Sky Is Fake",
-      category: "Social Media",
+      git: "https://github.com/aman-bhatti/cats",
+      live: "https://infinitecats.netlify.app/",
+      title: "Infinite Cats",
+      category: "Web Development",
       overview:
-        "The Sky Is Fake is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.",
-      tags: ["TypeScript", "React", "Next.js", "Tailwind", "Convex", "Clerk"],
+        "A pet project involving the use of The Cat API to fetch and display images with a button press.",
+      tags: ["JavaScript", "HTML", "CSS", "API", "Netlify"],
       year: "2023 ~",
       more: "",
-      next: "/proj/abstract",
-      nextTitle: "Abstract",
+      next: "",
+      nextTitle: "",
     },
 
     abstract: {
@@ -296,8 +254,8 @@ const fetchWorksData = (url: string): Work => {
         height: 1000,
         className: "w-full h-full",
       },
-      git: "https://github.com/knlrvr/portfolio-template",
-      live: "https://portfolio-template-knlrvr.vercel.app/",
+      git: "https://github.com/aman-bhatti/taskware",
+      live: "",
       title: "Portfolio Template",
       category: "Portfolio",
       overview:

@@ -255,7 +255,7 @@ const Bookshelf: React.FC = () => {
         <div className="section-header-books">
           <span className="section-title-books"> &#123;books&#125; </span>
         </div>
-        <p className="text-gray-400 mt-4">
+        <p className="!text-gray-400 mt-4">
           click on a book for my review on it!
         </p>
         <div className="bookshelf-container">

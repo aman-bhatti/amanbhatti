@@ -26,22 +26,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [showIntro, setShowIntro] = useState(true);
-  const router = useRouter();
-
-  const handleIntroFinish = () => {
-    setShowIntro(false);
-    router.push("/"); // Replace with your main page route
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      handleIntroFinish();
-    }); // 1 second for the animation
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <html lang="en">
       <head>
@@ -99,7 +83,7 @@ export default function RootLayout({
             </ThemeProvider>
           </ConvexProviderWithClerk>
         </ClerkProvider>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
