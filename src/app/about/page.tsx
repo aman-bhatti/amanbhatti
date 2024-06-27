@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import "../styles/about.css";
 import { Reveal } from "../../../lib/fade";
 
@@ -10,6 +11,7 @@ const tech_stack = [
   { name: "Golang", icon: "/icons/go.svg" },
   { name: "Javascript", icon: "/icons/javascript.svg" },
 ];
+
 const one = (
   <p>
     Hi, my name is Aman Bhatti and I am passionate about software development.
@@ -20,7 +22,9 @@ const one = (
     understanding of databases, web development, and DevOps.
   </p>
 );
+
 const two = <p id="paboutme"></p>;
+
 const About: React.FC = () => {
   return (
     <Reveal>
@@ -31,10 +35,12 @@ const About: React.FC = () => {
         <div className="break"></div>
         <div className="about-content">
           <div className="about-image">
-            <img
+            <Image
               className="image"
-              alt="aman bhatti"
-              src={"/images/pfp.jpeg"}
+              alt="Aman Bhatti"
+              src="/images/pfp.jpeg"
+              width={500}
+              height={500}
               loading="lazy"
             />
             <div className="middle">
@@ -47,9 +53,11 @@ const About: React.FC = () => {
             <div className="tech-stack">
               {tech_stack.map((tech_item, i) => (
                 <div key={i} className="tech-card">
-                  <img
+                  <Image
                     src={tech_item.icon}
                     alt={`${tech_item.name} icon`}
+                    width={50}
+                    height={50}
                     className="tech-icon"
                   />
                   <span className="techName">{tech_item.name}</span>
@@ -63,4 +71,5 @@ const About: React.FC = () => {
     </Reveal>
   );
 };
+
 export default About;
