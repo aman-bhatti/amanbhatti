@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "install:legacy": "npm install --legacy-peer-deps",
+    "install:force": "npm install --force",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
