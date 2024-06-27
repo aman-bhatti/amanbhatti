@@ -1,6 +1,10 @@
 import React from "react";
 import GuestbookForm from "../components/guestbook";
 
-export default function Guestbook() {
-  return <GuestbookForm />;
+export default function Guestbookpage() {
+  return (
+    <div>
+      <GuestbookForm />
+    </div>
+  );
 }
