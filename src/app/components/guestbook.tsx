@@ -46,13 +46,14 @@ const GuestbookForm: React.FC = () => {
 
   return (
     <div className="guestbook-container">
+      <h2>sign my guestbook :) </h2>
       <div className="flex flex-col">
         {!user && (
           <div className="sign-in-button">
             <SignInButton
               mode="modal"
-              forceRedirectUrl="#Guestbook"
-              signUpForceRedirectUrl={"#Guestbook"}
+              forceRedirectUrl="/guestbook"
+              signUpForceRedirectUrl={"/guestbook"}
             >
               <span>Sign in to leave a message</span>
             </SignInButton>
@@ -79,7 +80,7 @@ const GuestbookForm: React.FC = () => {
             </form>
           )}
           <div className="sign-out-button">
-            <SignOutButton redirectUrl="#Guestbook" />
+            <SignOutButton redirectUrl="/guestbook" />
           </div>
         </div>
       )}

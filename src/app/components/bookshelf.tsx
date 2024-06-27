@@ -116,32 +116,16 @@ const books: Book[] = [
       "https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/8d/b1/fd/8db1fd98-753b-1975-6e83-c2668263b4e4/9780062060631.jpg/100000x100000-999.jpg",
     report: "",
   },
+  // Add more books with URLs, reports, and spine styles here
+];
+
+const books2023: Book[] = [
   {
     title: "The Silent Patient",
     author: "Alex Michae...",
     cover:
       "https://is5-ssl.mzstatic.com/image/thumb/Publication124/v4/71/24/e9/7124e956-9924-4424-64bc-09cbf082a04a/9781250301710.jpg/100000x100000-999.jpg",
     report: "",
-  },
-  // Add more books with URLs, reports, and spine styles here
-];
-
-const books2023: Book[] = [
-  {
-    title: "Book Title 2023",
-    author: "Author Name",
-    cover: "https://example.com/book-cover-2023.jpg",
-    report: "",
-    spineTitleStyles: {
-      color: "black",
-      fontSize: "20px",
-      fontFamily: "serif",
-    },
-    spineAuthorStyles: {
-      color: "black",
-      fontSize: "16px",
-      fontFamily: "sans-serif",
-    },
   },
   // Add more books as needed
 ];

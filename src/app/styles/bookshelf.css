@@ -318,7 +318,7 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
-  margin-top: 70px; /* Adjust this value as needed to avoid overlap */
+  margin-top: 50px; /* Adjust this value as needed to avoid overlap */
 }
 
 .break {
