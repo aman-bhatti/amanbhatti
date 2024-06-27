@@ -289,11 +289,12 @@
 
 @media (max-width: 600px) {
   .review-modal {
-    max-width: 1000px !important; /* Increases the width slightly */
-    max-height: 85%; /* Increases the height slightly */
+    max-width: 95%;
+    max-height: 85%;
+    min-width: 410px; /* Increase the minimum width */
+    min-height: 220px; /* Increase the minimum height */
   }
 }
-
 .review-content {
   word-wrap: break-word; /* Ensures long words are wrapped to the next line */
 }
