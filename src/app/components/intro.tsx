@@ -4,7 +4,6 @@ import Typewriter from "typewriter-effect";
 import Contact from "./contact";
 import Link from "next/link";
 import Image from "next/image";
-
 const Info: React.FC = () => {
   return (
     <div className="position:relative;width:full;overflow:visible">
