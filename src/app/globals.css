@@ -279,3 +279,7 @@ hr {
   background-size: 100%;
   transition: background 0s;
 }
+
+.cl-footer {
+  display: none;
+}
