@@ -40,3 +40,4 @@ next-env.d.ts
 .eslintrc.json
 
 .env.local
+.env
