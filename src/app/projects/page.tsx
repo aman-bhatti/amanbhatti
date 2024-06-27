@@ -35,12 +35,6 @@ export default function Projects() {
             description="A cryptography project using a key encapsulation mechanism that combines asymmetric and symmetric systems to produce an efficient public key."
             // tech={['JavaScript', 'Next.js', 'Tailwind', 'MongoDB']}
           />
-          <ProjectCard
-            url="templateportfolio"
-            title="Portfolio Template"
-            description="A portfolio template inspired by Bartosz Jarocki's Next.js/shadcn CV."
-            // tech={['HTML', 'CSS', 'JavaScript']}
-          />
         </div>
       </div>
     </Reveal>
