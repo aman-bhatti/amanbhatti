@@ -33,7 +33,7 @@ export default function RootLayout({
         <meta name="description" content="Description" />
       </head>
       <body className={inter.className}>
-        <ClerkProvider publishableKey="pk_live_Y2xlcmsuYW1hbm5iaGF0dGkuY29tJA">
+        <ClerkProvider publishableKey="pk_test_c2FjcmVkLXNreWxhcmstMjMuY2xlcmsuYWNjb3VudHMuZGV2JA">
           <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
             <div className="side__StyledSideElement-sc-1wdt1ly-0 SLAQp">
               <div className="email__StyledLinkWrapper-sc-148iwo6-0 hMFHbo fade-enter-done">
