@@ -10,9 +10,9 @@ import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from "convex/react";
 import SplashScreen from "./components/introanimation";
 import Link from "next/link";
-import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import { LinkedIn } from "@mui/icons-material";
+import { GitHub } from "@mui/icons-material";
+import { EmailRounded } from "@mui/icons-material";
 import Footer from "./footer/page";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -48,9 +48,7 @@ export default function RootLayout({
                     className="navRight"
                     href="mailto:amanxbhatti@gmail.com"
                   >
-                    <EmailRoundedIcon
-                      style={{ fontSize: 25 }}
-                    ></EmailRoundedIcon>
+                    <EmailRounded style={{ fontSize: 25 }}></EmailRounded>
                   </a>
                 </li>
                 <li className="social-icons">
@@ -60,7 +58,7 @@ export default function RootLayout({
                     id="gh"
                     target="_blank"
                   >
-                    <GitHubIcon style={{ fontSize: 25 }}></GitHubIcon>
+                    <GitHub style={{ fontSize: 25 }}></GitHub>
                   </a>
                 </li>
                 <li className="social-icons">
@@ -70,7 +68,7 @@ export default function RootLayout({
                     target="_blank"
                     id="in"
                   >
-                    <LinkedInIcon style={{ fontSize: 25 }}></LinkedInIcon>
+                    <LinkedIn style={{ fontSize: 25 }}></LinkedIn>
                   </a>
                 </li>
               </ul>
