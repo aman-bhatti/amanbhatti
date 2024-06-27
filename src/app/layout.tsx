@@ -73,7 +73,7 @@ export default function RootLayout({
                 </li>
               </ul>
             </div>
-            <ThemeProvider attribute="class" defaultTheme="light">
+            <ThemeProvider attribute="class" defaultTheme="dark">
               <div className="max-w-[1000px] mx-auto py-4 flex flex-col min-h-screen">
                 <Navbar />
                 {children}
