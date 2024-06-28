@@ -106,7 +106,7 @@ const books: Book[] = [
     title: "Norwegian Wood",
     author: "Haruki Murakami",
     cover:
-      "http://www.thirstforfiction.com/wp-content/uploads/2014/12/Norwegian-Wood-Haruki-Murakami.jpg",
+      "https://is5-ssl.mzstatic.com/image/thumb/Publication3/v4/55/4f/23/554f23d3-b633-0c7e-6cf0-5dbaf524b735/9788858407240.jpg/100000x100000-999.jpg",
     report: "",
   },
   {
