@@ -1,8 +1,8 @@
-# <span className="book-review-heading" style="color: #00a6b3">The Song of Achilles by Madenline Miler</span>
+# <span className="book-review-heading" style="color: #00a6b3">The Song of Achilles by Madeline Miler</span>
 
 This was yet another book club reading where I had only seen this book online and nothing more of it. I later learned that this is BookTok's number one viewed book which was quite surprising nonetheless.
 
-_The Song of Achilles_ by Madenline Miler is a captivating retelling of Homer's Iliad which focuses on the relationship between Achilles and Patroclus. This novel takes readers on a blend of myth, history, romance, and grief to make one compelling story.
+_The Song of Achilles_ by Madeline Miler is a captivating retelling of Homer's Iliad which focuses on the relationship between Achilles and Patroclus. This novel takes readers on a blend of myth, history, romance, and grief to make one compelling story.
 
 While reading this book, if I am being honest, I did not feel much. I understand that one of the main components/themes of this book is built upon the emotional connection between our two main characters Achilles and Patroclus, but for some reason, I couldn't grasp it. I enjoyed the writing by Miler and can appreciate the world-building she makes time for, but at some points, it just dragged on for me.
 
