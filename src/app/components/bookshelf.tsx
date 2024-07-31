@@ -114,7 +114,7 @@ const books: Book[] = [
     author: "Madeline Miller",
     cover:
       "https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/8d/b1/fd/8db1fd98-753b-1975-6e83-c2668263b4e4/9780062060631.jpg/100000x100000-999.jpg",
-    report: "",
+    report: "tsoa.md",
   },
   // Add more books with URLs, reports, and spine styles here
 ];
