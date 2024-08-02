@@ -18,4 +18,4 @@ All in all, I think the book was exciting and informative and just that. I don't
 
 > He is a weapon, a killer. Do not forget it. You can use a spear as a walking stick, but that will not change its nature.
 
-# Rating: <span style="color: gold"> ★★★⯪☆ </span>
+# Rating: <span style="color: gold"> ★★★☆☆ </span>
