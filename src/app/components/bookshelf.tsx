@@ -138,13 +138,9 @@ const books2023: Book[] = [
       color: "gold",
       fontSize: "16px", // Adjust size if needed
       fontFamily: "sans-serif",
-      writingMode: "vertical-rl",
       textOrientation: "mixed",
       whiteSpace: "normal",
       wordWrap: "break-word",
-      display: "-webkit-box",
-      WebkitLineClamp: 2,
-      WebkitBoxOrient: "vertical",
       lineHeight: "1.2em",
     },
   },
