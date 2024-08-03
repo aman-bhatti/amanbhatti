@@ -121,6 +121,55 @@ const books: Book[] = [
 
 const books2023: Book[] = [
   {
+    title: "Harry Potter and the Sorcerer's Stone",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/sorcerers-stone-us-childrens-edition-1050x0-c-default.jpg",
+    report: "hp.md",
+  },
+  {
+    title: "Harry Potter and the Chamber of Secrets",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/chamber-of-secrets-us-childrens-edition-1050x0-c-default.jpg",
+    report: "hp.md",
+  },
+  {
+    title: "Harry Potter and the Prisoner of Azkaban",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/prisoner-of-azkaban-us-childrens-edition-1050x0-c-default.jpg",
+    report: "hp.md",
+  },
+  {
+    title: "Harry Potter and the Goblet of Fire",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/goblet-of-fire-us-childrens-edition.jpg",
+    report: "hp.md",
+  },
+  {
+    title: "Harry Potter and the Order of the Phoenix",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/order-of-the-phoenix-us-childrens-edition-1050x0-c-default.jpg",
+    report: "hp.md",
+  },
+  {
+    title: "Harry Potter and the Half-Blood Prince",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/half-blood-prince-us-childrens-edition-1050x0-c-default.jpg",
+    report: "hp.md",
+  },
+  {
+    title: "Harry Potter and the Deathly Hallows",
+    author: "J. K. Rowling",
+    cover:
+      "https://media.harrypotterfanzone.com/deathly-hallows-uk-childrens-edition-1050x0-c-default.jpg",
+    report: "hp.md",
+  },
+  {
     title: "The Silent Patient",
     author: "Alex Michae...",
     cover:
