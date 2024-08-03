@@ -63,9 +63,17 @@ const books: Book[] = [
       "https://is5-ssl.mzstatic.com/image/thumb/Publication128/v4/b9/29/61/b92961a1-147f-c649-dc25-6c4e3a089b55/9781931520898.jpg/100000x100000-999.jpg",
     report: "",
     spineTitleStyles: {
-      color: "white",
-      fontSize: "13px",
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
       fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
     },
   },
   {
@@ -126,6 +134,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/sorcerers-stone-us-childrens-edition-1050x0-c-default.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "Harry Potter and the Chamber of Secrets",
@@ -133,6 +154,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/chamber-of-secrets-us-childrens-edition-1050x0-c-default.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "Harry Potter and the Prisoner of Azkaban",
@@ -140,6 +174,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/prisoner-of-azkaban-us-childrens-edition-1050x0-c-default.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "Harry Potter and the Goblet of Fire",
@@ -147,6 +194,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/goblet-of-fire-us-childrens-edition.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "Harry Potter and the Order of the Phoenix",
@@ -154,6 +214,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/order-of-the-phoenix-us-childrens-edition-1050x0-c-default.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "Harry Potter and the Half-Blood Prince",
@@ -161,6 +234,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/half-blood-prince-us-childrens-edition-1050x0-c-default.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "Harry Potter and the Deathly Hallows",
@@ -168,6 +254,19 @@ const books2023: Book[] = [
     cover:
       "https://media.harrypotterfanzone.com/deathly-hallows-uk-childrens-edition-1050x0-c-default.jpg",
     report: "hp.md",
+    spineTitleStyles: {
+      color: "gold",
+      fontSize: "16px", // Adjust size if needed
+      fontFamily: "sans-serif",
+      writingMode: "vertical-rl",
+      textOrientation: "mixed",
+      whiteSpace: "normal",
+      wordWrap: "break-word",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      lineHeight: "1.2em",
+    },
   },
   {
     title: "The Silent Patient",
