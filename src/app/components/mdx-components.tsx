@@ -2,6 +2,7 @@ import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
 import { Callout } from "./callout";
 import StarIcon from "@mui/icons-material/Star";
+import StarHalf from "@mui/icons-material/StarHalf";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -12,6 +13,7 @@ const components = {
   Image,
   Callout,
   StarIcon,
+  StarHalf,
 };
 
 interface MdxProps {
