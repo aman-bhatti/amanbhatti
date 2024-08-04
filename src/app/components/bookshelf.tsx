@@ -246,6 +246,13 @@ const books2023: Book[] = [
     },
   },
   {
+    title: "Atomic Habits",
+    author: "James Clear",
+    cover:
+      "https://is5-ssl.mzstatic.com/image/thumb/Publication116/v4/a6/cb/fc/a6cbfc7d-3c6a-d9f1-b83c-c24cbd61ef77/9780735211308.d.jpg/100000x100000-999.jpg",
+    report: "",
+  },
+  {
     title: "The Silent Patient",
     author: "Alex Michae...",
     cover:
