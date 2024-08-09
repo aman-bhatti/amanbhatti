@@ -42,8 +42,7 @@ const books: Book[] = [
   {
     title: "1984",
     author: "George Orwell",
-    cover:
-      "https://149522020.v2.pressablecdn.com/wp-content/uploads/2017/01/2a34d8_a6741e88335241308890543d203ad89dmv2.jpg",
+    cover: "https://m.media-amazon.com/images/I/71rpa1-kyvL._SL1500_.jpg",
     report: "1984.md",
     spineTitleStyles: {
       color: "black",

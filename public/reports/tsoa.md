@@ -1,5 +1,7 @@
 # <span className="book-review-heading" style="color: #00a6b3">The Song of Achilles by Madeline Miller</span>
 
+![Web image](https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/8d/b1/fd/8db1fd98-753b-1975-6e83-c2668263b4e4/9780062060631.jpg/100000x100000-999.jpg)
+
 This was yet another book club reading where I had only seen this book online and nothing more of it. I later learned that this is BookTok's number one viewed book which was quite surprising nonetheless.
 
 _The Song of Achilles_ by Madeline Miller is a captivating retelling of Homer's Iliad which focuses on the relationship between Achilles and Patroclus. This novel takes readers on a blend of myth, history, romance, and grief to make one compelling story.
