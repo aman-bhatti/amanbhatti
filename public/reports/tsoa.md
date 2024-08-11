@@ -1,4 +1,4 @@
-# <span className="book-review-heading" style="color: #00a6b3">The Song of Achilles by Madeline Miller</span>
+# <span className="book-review-heading" style="color: #00a6b3">_The Song of Achilles by Madeline Miller_</span>
 
 ![Web image](https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/8d/b1/fd/8db1fd98-753b-1975-6e83-c2668263b4e4/9780062060631.jpg/100000x100000-999.jpg)
 
@@ -6,9 +6,9 @@ This was yet another book club reading where I had only seen this book online an
 
 _The Song of Achilles_ by Madeline Miller is a captivating retelling of Homer's Iliad which focuses on the relationship between Achilles and Patroclus. This novel takes readers on a blend of myth, history, romance, and grief to make one compelling story.
 
-While reading this book, if I am being honest, I did not feel much. I understand that one of the main components/themes of this book is built upon the emotional connection between our two main characters Achilles and Patroclus, but for some reason, I couldn't grasp it. I enjoyed the writing by Miler and can appreciate the world-building she makes time for, but at some points, it just dragged on for me.
+While reading this book, if I am being honest, I did not feel much. I understand that one of the main components/themes of this book is built upon the emotional connection between our two main characters Achilles and Patroclus, but for some reason, I couldn't grasp it. I enjoyed the writing by Miller and can appreciate the world-building she makes time for, but at some points, it just dragged on for me.
 
-I think the main problem with this is how the mighty strong Achilles gets drawn to Patroclus as described by Miler. For most of the story until the very end, Patroclus is defined as someone who is uninterested in combat and violence and finds no satisfaction in fighting. He tends to lean towards the supportive role rather than being a frontline warrior. At the end of the book during the Trojan War, he dawns Achilles' armor and becomes this battle-ready hero.
+I think the main problem with this is how the mighty strong Achilles gets drawn to Patroclus as described by Miller. For most of the story until the very end, Patroclus is defined as someone who is uninterested in combat and violence and finds no satisfaction in fighting. He tends to lean towards the supportive role rather than being a frontline warrior. At the end of the book during the Trojan War, he dawns Achilles' armor and becomes this battle-ready hero.
 
 Another point is how long it takes to get to the Trojan War. Even when we're at the war, there is not much of it. This is understandable as this is through the eyes of Patroclus/Achilles, but to a certain extent, it just got old real quick.
 

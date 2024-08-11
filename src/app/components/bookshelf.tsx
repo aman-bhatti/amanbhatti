@@ -120,6 +120,14 @@ const books: Book[] = [
       "https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/8d/b1/fd/8db1fd98-753b-1975-6e83-c2668263b4e4/9780062060631.jpg/100000x100000-999.jpg",
     report: "tsoa.md",
   },
+  {
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
+    cover:
+      "https://is5-ssl.mzstatic.com/image/thumb/Publication4/v4/6e/4f/4e/6e4f4e8c-a6e4-52bb-3fd7-2b11e291a45a/9780307829603.jpg/100000x100000-999.jpg",
+    report: "c&p.md",
+  },
+
   // Add more books with URLs, reports, and spine styles here
 ];
 
