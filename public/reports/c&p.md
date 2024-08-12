@@ -4,4 +4,4 @@
 
 REVIEW COMING SOON
 
-# Rating: <span style="color: gold"> ★★★★★ </span>
+# Rating: <span style="color: gold"> ★★★★ ½ </span>
