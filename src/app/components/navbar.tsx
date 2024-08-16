@@ -16,7 +16,6 @@ const navItems = {
     // Add the Notes section here
     name: "notes",
     external: true, // Mark it as an external link
-    target: "_blank",
   },
 };
 
@@ -35,16 +34,30 @@ export function Navbar() {
             aman
           </Link>
           <div className="flex ms-auto flex-row space-x-0 pr-4">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className="text-gray-700 dark:text-neutral-400 transition-all hover:text-neutral-600 focus:text-neutral-600 dark:hover:text-stone-500 dark:focus:text-stone-500 flex align-middle relative py-1 px-2"
-                >
-                  {name}
-                </Link>
-              );
+            {Object.entries(navItems).map(([path, { name, external }]) => {
+              if (external) {
+                return (
+                  <a
+                    key={path}
+                    href={path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 dark:text-neutral-400 transition-all hover:text-neutral-600 focus:text-neutral-600 dark:hover:text-stone-500 dark:focus:text-stone-500 flex align-middle relative py-1 px-2"
+                  >
+                    {name}
+                  </a>
+                );
+              } else {
+                return (
+                  <Link
+                    key={path}
+                    href={path}
+                    className="text-gray-700 dark:text-neutral-400 transition-all hover:text-neutral-600 focus:text-neutral-600 dark:hover:text-stone-500 dark:focus:text-stone-500 flex align-middle relative py-1 px-2"
+                  >
+                    {name}
+                  </Link>
+                );
+              }
             })}
           </div>
           <ModeToggle />
