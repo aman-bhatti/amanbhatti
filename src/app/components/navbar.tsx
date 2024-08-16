@@ -12,6 +12,11 @@ const navItems = {
   "/guestbook": {
     name: "guestbook",
   },
+  "https://notes.amannbhatti.com": {
+    // Add the Notes section here
+    name: "notes",
+    external: true, // Mark it as an external link
+  },
 };
 
 export function Navbar() {
