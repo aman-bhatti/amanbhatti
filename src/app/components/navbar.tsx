@@ -16,6 +16,7 @@ const navItems = {
     // Add the Notes section here
     name: "notes",
     external: true, // Mark it as an external link
+    target: "_blank",
   },
 };
 
