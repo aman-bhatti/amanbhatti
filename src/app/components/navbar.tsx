@@ -2,7 +2,12 @@ import Link from "next/link";
 import { ModeToggle } from "./theme-toggle";
 import "../styles/navbar.css";
 
-const navItems = {
+type NavItem = {
+  name: string;
+  external?: boolean; // external is optional
+};
+
+const navItems: Record<string, NavItem> = {
   "/blog": {
     name: "blogs",
   },
@@ -13,7 +18,6 @@ const navItems = {
     name: "guestbook",
   },
   "https://notes.amannbhatti.com": {
-    // Add the Notes section here
     name: "notes",
     external: true, // Mark it as an external link
   },
