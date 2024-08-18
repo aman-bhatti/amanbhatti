@@ -145,7 +145,7 @@ export default async function WorksPage({
 
 export async function generateStaticParams() {
   return [
-    { url: "note-taking" },
+    { url: "notetaking" },
     { url: "taskware" },
     { url: "algorithms" },
     { url: "infinitecats" },
@@ -159,7 +159,7 @@ const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
     notetaking: {
-      url: "note-taking",
+      url: "notetaking",
       brand: {
         src: "/images/note-taking.png",
         alt: "",
