@@ -127,6 +127,13 @@ const books: Book[] = [
       "https://is5-ssl.mzstatic.com/image/thumb/Publication4/v4/6e/4f/4e/6e4f4e8c-a6e4-52bb-3fd7-2b11e291a45a/9780307829603.jpg/100000x100000-999.jpg",
     report: "c&p.md",
   },
+  {
+    title: "Animal Farm",
+    author: "George Orwell",
+    cover:
+      "https://images.squarespace-cdn.com/content/v1/56cde58af699bb2bd4ea993a/1600027397959-8AFCA5EFW64N7K05OJ7Y/AF+New+Deluxe+Trade+Kait.jpg?format=1000w",
+    report: "animal_farm.md",
+  },
   // Add more books with URLs, reports, and spine styles here
 ];
 
