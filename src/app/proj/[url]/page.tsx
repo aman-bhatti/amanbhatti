@@ -145,6 +145,7 @@ export default async function WorksPage({
 
 export async function generateStaticParams() {
   return [
+    { url: "note-taking" },
     { url: "taskware" },
     { url: "algorithms" },
     { url: "infinitecats" },
@@ -157,6 +158,34 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
+    notetaking: {
+      url: "note-taking",
+      brand: {
+        src: "/images/note-taking.png",
+        alt: "",
+        width: 1000,
+        height: 1000,
+        className: "w-full h-full",
+      },
+      git: "https://github.com/aman-bhatti/note-taking",
+      live: "https://notes.amannbhatti.com/login",
+      title: "Note Taking App",
+      category: "Full Stack",
+      overview: "",
+      tags: [
+        "TypeScript",
+        "React.JS",
+        "JavaScript",
+        "Tailwind CSS",
+        "Firebase OAuth",
+        "Firestore database",
+        "Vercel",
+      ],
+      year: "2024 ~",
+      more: "",
+      next: "",
+      nextTitle: "",
+    },
     taskware: {
       url: "taskware",
       brand: {
