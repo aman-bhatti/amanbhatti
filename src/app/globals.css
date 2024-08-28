@@ -17,6 +17,7 @@
   --container-bg-color: white;
   --text-desc: #737373;
   --h-color: black;
+  --active-color: color: rgb(82 82 82);
 }
 
 /* Dark mode styles */
@@ -29,6 +30,7 @@
   --text-hover: #322f2e;
   --text-desc: #737373;
   --h-color: white;
+  --active-color: color: rgb(120 113 108);
 }
 
 .proj-desc {

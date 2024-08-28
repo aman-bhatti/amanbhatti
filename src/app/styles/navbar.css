@@ -33,6 +33,6 @@
 
 /* navbar.css */
 .active-class {
-  color: #3498db; /* Highlight color for active link */
-  font-weight: bold; /* Optional: make the active link bold */
+  color: var(--active-color);
+  font-weight: bold;
 }

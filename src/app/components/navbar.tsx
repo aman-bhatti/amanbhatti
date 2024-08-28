@@ -38,7 +38,7 @@ export function Navbar() {
         >
           <Link
             href="/"
-            className={`italic pl-2 text-gray-700 dark:text-neutral-400 hover:text-neutral-600 focus:text-neutral-600 dark:hover:text-stone-500 dark:focus:text-stone-500 ${
+            className={`italic pl-2 text-gray-700 dark:text-neutral-400 hover:text-neutral-600 dark:hover:text-stone-500  ${
               currentPath === "/" ? "active-class" : ""
             }`}
           >
@@ -47,7 +47,7 @@ export function Navbar() {
           <div className="flex ms-auto flex-row space-x-0 pr-4">
             {Object.entries(navItems).map(([path, { name, external }]) => {
               const isActive = currentPath === path; // Check if the current path matches
-              const linkClass = `text-gray-700 dark:text-neutral-400 transition-all hover:text-neutral-600 focus:text-neutral-600 dark:hover:text-stone-500 dark:focus:text-stone-500 flex align-middle relative py-1 px-2 ${
+              const linkClass = `text-gray-700 dark:text-neutral-400 transition-all hover:text-neutral-600 dark:hover:text-stone-500 flex align-middle relative py-1 px-2 ${
                 isActive ? "active-class" : ""
               }`; // Apply active-class conditionally
 
