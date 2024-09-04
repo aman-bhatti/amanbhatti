@@ -33,29 +33,7 @@ const experiences: ExperienceItem[] = [
       </ul>
     ),
   },
-  {
-    title: "Data Analyst Intern",
-    company: "Nuasin Charter School ",
-    duration: "Oct 2020 - May 2021",
-    description: (
-      <ul>
-        <li>
-          • Managed and analyzed the educational system database, extracting
-          insights on student behaviors and usage patterns with school-issued
-          Chromebooks; methodically documented anomalies and trends for informed
-          decision-making.
-        </li>
-        <li>
-          • Provided data-driven recommendations to address technical issues
-          faced by students and staff, leveraging analytical tools to diagnose
-          and predict recurrent problems, optimizing the educational experience
-          through proactive measures.
-        </li>
-      </ul>
-    ),
-  },
 ];
-
 const Experience: React.FC = () => {
   const [selectedExperience, setSelectedExperience] =
     useState<ExperienceItem | null>(null);
