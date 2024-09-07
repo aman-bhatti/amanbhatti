@@ -12,6 +12,12 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-4 gap-x-12 gap-y-8 pl-4">
           <ProjectCard
+            url="bookrecognition"
+            title="Book Recognition App"
+            description="A book recognition app that uses your camera to instantly identify a book's title when shown."
+            // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
+          />
+          <ProjectCard
             url="notetaking"
             title="Note Taking App"
             description="A fully functional note taking app that allows users to sign up and save their notes."

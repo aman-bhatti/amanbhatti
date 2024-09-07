@@ -2,8 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "../../../../lib/fade";
 
-import type { Metadata } from "next";
-
 import { RxArrowTopRight } from "react-icons/rx";
 
 interface Work {
@@ -145,6 +143,7 @@ export default async function WorksPage({
 
 export async function generateStaticParams() {
   return [
+    { url: "bookrecognition" },
     { url: "notetaking" },
     { url: "taskware" },
     { url: "algorithms" },
@@ -158,6 +157,34 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
+    bookrecognition: {
+      url: "bookrecognition",
+      brand: {
+        src: "",
+        alt: "",
+        width: 1000,
+        height: 1000,
+        className: "w-full h-full",
+      },
+      git: "https://github.com/aman-bhatti/book-recognition",
+      live: "",
+      title: "Book Recognition App",
+      category: "Machine Learning",
+      overview: "",
+      tags: [
+        "Python",
+        "Tkinter",
+        "OpenCV",
+        "Pillow",
+        "TensorFlow",
+        "Virtualenv",
+        "Google Books API",
+      ],
+      year: "2024 ~",
+      more: "",
+      next: "",
+      nextTitle: "",
+    },
     notetaking: {
       url: "notetaking",
       brand: {
