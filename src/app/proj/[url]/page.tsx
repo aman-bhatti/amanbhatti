@@ -143,8 +143,10 @@ export default async function WorksPage({
 
 export async function generateStaticParams() {
   return [
+    { url: "sudokutui" },
     { url: "bookrecognition" },
     { url: "notetaking" },
+    { url: "portfolio" },
     { url: "taskware" },
     { url: "algorithms" },
     { url: "infinitecats" },
@@ -157,6 +159,26 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
+    portfolio: {
+      url: "portfolio",
+      brand: {
+        src: "",
+        alt: "",
+        width: 1000,
+        height: 1000,
+        className: "w-full h-full",
+      },
+      git: "https://github.com/aman-bhatti/amanbhatti",
+      live: "https://amannbhatti.com/",
+      title: "Personal Portfolio",
+      category: "Full Stack",
+      overview: "",
+      tags: ["Typescript", "Next.js", "Convex", "Firebase", "Clerk"],
+      year: "2024 ~",
+      more: "",
+      next: "",
+      nextTitle: "",
+    },
     bookrecognition: {
       url: "bookrecognition",
       brand: {

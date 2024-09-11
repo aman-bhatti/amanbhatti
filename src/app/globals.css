@@ -33,6 +33,10 @@
   --active-color: color: rgb(120 113 108);
 }
 
+::selection {
+  background-color: #f4c2c2;
+}
+
 .proj-desc {
   color: var(--text-desc) !important;
 }

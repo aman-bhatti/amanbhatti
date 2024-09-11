@@ -16,7 +16,7 @@ const Info: React.FC = () => {
             height="1000"
             decoding="async"
             className="h-12 w-12 rounded-full"
-            src="/images/IMG_0681.jpg"
+            src="/images/pixelpfp.png"
           />
           <div className="flex flex-col">
             <p className="font-black text-base tracking-wide">Aman Bhatti</p>
