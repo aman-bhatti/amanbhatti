@@ -25,7 +25,7 @@ const one = (
 
 const two = <p id="paboutme"></p>;
 
-const About: React.FC = () => {
+export default function AboutMePage() {
   return (
     <Reveal>
       <div id="about">
@@ -70,6 +70,4 @@ const About: React.FC = () => {
       </div>
     </Reveal>
   );
-};
-
-export default About;
+}
