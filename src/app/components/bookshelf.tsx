@@ -34,6 +34,17 @@ const getRootCssStyles = (): string[] => {
     "--spine-chevron",
     "--spine-zigzag",
     "--spine-tablecloth",
+    "--spine-herringbone",
+    "--spine-waves",
+    "--spine-leather",
+    "--spine-circuit",
+    "--spine-op",
+    "--spine-sashiko",
+    "--spine-marrakesh",
+    "--spine-braided",
+    "--spine-marble",
+    "--spine-weave",
+    "--spine-crosshatch",
     // Add more patterns as required
   ];
 };
