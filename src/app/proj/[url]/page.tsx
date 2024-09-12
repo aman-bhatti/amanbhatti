@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "../../../../lib/fade";
-
 import { RxArrowTopRight } from "react-icons/rx";
 
 interface Work {
@@ -43,7 +42,7 @@ export default async function WorksPage({
       </Link>
       {projects?.brand && (
         <Reveal>
-          <div className={`flex justify-center`}>
+          <div className={`flex justify-center mt-3`}>
             <Image
               src={projects?.brand.src}
               alt={projects?.brand.alt}
@@ -76,9 +75,22 @@ export default async function WorksPage({
         <div className="flex flex-col space-y-12 mb-12">
           <div className="font-light">
             <span className="font-medium tracking-wide text-xl">Overview</span>
-            <p key={projects?.title} className="blog text-sm mt-4">
-              {projects?.overview}
-            </p>
+            {projects?.overview.split("\n\n").map((paragraph, index) => (
+              <p key={index} className="blog text-sm mt-4">
+                {projects?.url === "sudokutui" &&
+                paragraph.includes("ssh tuisudoku.net") ? (
+                  <>
+                    {paragraph.split("ssh tuisudoku.net")[0]}
+                    <pre className="experience-container p-2 rounded-md mt-2">
+                      <code className="text-red-500">ssh tuisudoku.net</code>
+                    </pre>
+                    {paragraph.split("ssh tuisudoku.net")[1]}
+                  </>
+                ) : (
+                  paragraph
+                )}
+              </p>
+            ))}
           </div>
 
           <div className="text-sm grid grid-cols-1 sm:grid-cols-3 gap-y-6">
@@ -159,6 +171,27 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
+    sudokutui: {
+      url: "sudokutui",
+      brand: {
+        src: "/images/sudokutui.png",
+        alt: "",
+        width: 1000,
+        height: 1000,
+        className: "w-full h-full",
+      },
+      git: "https://github.com/aman-bhatti/sudoku_tui",
+      live: "",
+      title: "Sudoku TUI",
+      category: "Network Game Development",
+      overview:
+        "I’ve developed a Sudoku TUI (Text User Interface) app using Charm's Bubble Tea framework for a smooth, interactive experience. The app allows users to solve Sudoku puzzles directly in their terminal with a responsive interface. To make it more accessible, I've hosted the app via SSH on a domain, this makes it so users don't have to download or install anything and enables them to connect and interact with the TUI remotely using a secure SSH connection. The app highlights wrong cells when the solution is incorrect, helping players learn and improve. It’s an innovative, minimalist way to enjoy Sudoku anywhere with just an SSH connection.\n\nTry it yourself by opening up a terminal and typing in the command below.  ssh tuisudoku.net\n\nType yes afterwards and enjoy playing!",
+      tags: ["Golang"],
+      year: "2024 ~",
+      more: "",
+      next: "",
+      nextTitle: "",
+    },
     portfolio: {
       url: "portfolio",
       brand: {
