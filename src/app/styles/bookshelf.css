@@ -802,6 +802,7 @@
   z-index: 1000;
   max-width: 90%; /* Ensures modal doesn't exceed viewport width */
   max-height: 90%; /* Ensures modal doesn't exceed viewport height */
+  overflow-y: auto;
   font-family: "Lora", serif; /* Applying the font to the modal */
 }
 
