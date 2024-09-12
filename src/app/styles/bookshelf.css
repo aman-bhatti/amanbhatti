@@ -801,10 +801,19 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-width: 90%; /* Ensures modal doesn't exceed viewport width */
-  max-height: 80%; /* Ensures modal doesn't exceed viewport height */
+  max-height: 90%; /* Ensures modal doesn't exceed viewport height */
   overflow-y: auto; /* Adds scroll for overflow content vertically */
   overflow-x: hidden; /* Prevents horizontal scrolling */
   font-family: "Lora", serif; /* Applying the font to the modal */
+}
+
+.scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #3395ff;
+  transition: width 0.3s ease;
 }
 
 @media (max-width: 600px) {
@@ -816,7 +825,10 @@
   }
 }
 .review-content {
-  word-wrap: break-word; /* Ensures long words are wrapped to the next line */
+  max-height: calc(80vh - 4px); /* Subtract the height of the progress bar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 20px; /* Add some padding to account for the scrollbar */
+  /* Remove any max-height or overflow properties if they exist here */
 }
 
 .review-modal button {

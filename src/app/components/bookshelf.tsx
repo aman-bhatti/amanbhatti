@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "../styles/bookshelf.css";
@@ -289,6 +289,8 @@ const books2023: Book[] = [
 const Bookshelf: React.FC = () => {
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
   const [reportContent, setReportContent] = useState<string>("");
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const reviewContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const spines = document.getElementsByClassName(
@@ -340,8 +342,33 @@ const Bookshelf: React.FC = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (reviewContentRef.current) {
+        const { scrollTop, scrollHeight, clientHeight } =
+          reviewContentRef.current;
+        const scrollPercentage =
+          (scrollTop / (scrollHeight - clientHeight)) * 100;
+        setScrollProgress(scrollPercentage);
+      }
+    };
+
+    const reviewContent = reviewContentRef.current;
+    if (reviewContent) {
+      reviewContent.addEventListener("scroll", handleScroll);
+      reviewContent.scrollTop = 0;
+    }
+
+    return () => {
+      if (reviewContent) {
+        reviewContent.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, [selectedBook]);
+
   const handleBookClick = async (book: Book) => {
     setSelectedBook(book);
+    setScrollProgress(0);
     const reportFile = book.report || "template.md";
     const response = await fetch(`/reports/${reportFile}`);
     const text = await response.text();
@@ -351,6 +378,7 @@ const Bookshelf: React.FC = () => {
   const closeReview = () => {
     setSelectedBook(null);
     setReportContent("");
+    setScrollProgress(0);
   };
 
   return (
@@ -437,8 +465,12 @@ const Bookshelf: React.FC = () => {
 
         {selectedBook && (
           <div className="review-modal">
-            <div className="review-content">
-              <ReactMarkdown className="prose " rehypePlugins={[rehypeRaw]}>
+            <div
+              className="scroll-progress-bar"
+              style={{ width: `${scrollProgress}%` }}
+            ></div>
+            <div className="review-content" ref={reviewContentRef}>
+              <ReactMarkdown className="prose" rehypePlugins={[rehypeRaw]}>
                 {reportContent}
               </ReactMarkdown>
               <button onClick={closeReview}>Close</button>
