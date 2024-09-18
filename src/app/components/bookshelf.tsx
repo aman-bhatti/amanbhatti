@@ -145,6 +145,13 @@ const books: Book[] = [
       "https://images.squarespace-cdn.com/content/v1/56cde58af699bb2bd4ea993a/1600027397959-8AFCA5EFW64N7K05OJ7Y/AF+New+Deluxe+Trade+Kait.jpg?format=1000w",
     report: "animal_farm.md",
   },
+  {
+    title: "Stoner",
+    author: "John Williams",
+    cover:
+      "https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/bf/1f/bc/bf1fbcda-11b3-4cee-2909-1104ebe422b6/9781590173930.jpg/100000x100000-999.jpg",
+    report: "stoner.md",
+  },
   // Add more books with URLs, reports, and spine styles here
 ];
 
