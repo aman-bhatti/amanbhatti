@@ -152,6 +152,26 @@ const books: Book[] = [
       "https://is5-ssl.mzstatic.com/image/thumb/Publication125/v4/bf/1f/bc/bf1fbcda-11b3-4cee-2909-1104ebe422b6/9781590173930.jpg/100000x100000-999.jpg",
     report: "stoner.md",
   },
+  {
+    title: "The Brothers Karamazov",
+    author: "Fyodor Dostoevsky",
+    cover: "https://m.media-amazon.com/images/I/71agR0zF7mL._SL1200_.jpg",
+    report: "tbk.md",
+  },
+  {
+    title: "Frankenstein",
+    author: "Mary Shelley",
+    cover:
+      "https://is5-ssl.mzstatic.com/image/thumb/Publication123/v4/6e/64/6b/6e646b24-17de-f178-d4dd-0b3a34934d2a/PD_Frankensein-Adj.jpg/100000x100000-999.jpg",
+    report: "frankenstein.md",
+  },
+  {
+    title: "Muder on the Orient Express",
+    author: "Agatha Christie",
+    cover:
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCYvJEPMTSP2bq3WRydozS32Y7CN794LaJkNHX73sUv3E4eBQAMRq0p2p71ghxluijADjYGYHWvPIVoypilmuyFfQUtco-9ZwUDkaS9J0sP6fWcHIuyUMt2ulPCnGvAuXIzlaxy7koWqrtr92rHm49AZs1mbvqzRf6UGuRK1UQXwFtwglCJxrcQzN9IzPo/s786/2011.AgathaChristie.MurderOnTheOrientExpress.Harper.a.j...jpeg",
+    report: "murder_on_the_orient_express.md",
+  },
   // Add more books with URLs, reports, and spine styles here
 ];
 
@@ -289,26 +309,6 @@ const books2023: Book[] = [
     cover:
       "https://is5-ssl.mzstatic.com/image/thumb/Publication124/v4/71/24/e9/7124e956-9924-4424-64bc-09cbf082a04a/9781250301710.jpg/100000x100000-999.jpg",
     report: "",
-  },
-  {
-    title: "The Brothers Karamazov",
-    author: "Fyodor Dostoevsky",
-    cover: "https://m.media-amazon.com/images/I/71agR0zF7mL._SL1200_.jpg",
-    report: "tbk.md",
-  },
-  {
-    title: "Frankenstein",
-    author: "Mary Shelley",
-    cover:
-      "https://is5-ssl.mzstatic.com/image/thumb/Publication123/v4/6e/64/6b/6e646b24-17de-f178-d4dd-0b3a34934d2a/PD_Frankensein-Adj.jpg/100000x100000-999.jpg",
-    report: "frankenstein.md",
-  },
-  {
-    title: "Muder on the Orient Express",
-    author: "Agatha Christie",
-    cover:
-      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCYvJEPMTSP2bq3WRydozS32Y7CN794LaJkNHX73sUv3E4eBQAMRq0p2p71ghxluijADjYGYHWvPIVoypilmuyFfQUtco-9ZwUDkaS9J0sP6fWcHIuyUMt2ulPCnGvAuXIzlaxy7koWqrtr92rHm49AZs1mbvqzRf6UGuRK1UQXwFtwglCJxrcQzN9IzPo/s786/2011.AgathaChristie.MurderOnTheOrientExpress.Harper.a.j...jpeg",
-    report: "murder_on_the_orient_express.md",
   },
   // Add more books as needed
 ];
