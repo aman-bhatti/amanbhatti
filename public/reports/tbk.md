@@ -1,6 +1,6 @@
 # <span className="book-review-heading" style="color: #665e31">_The Brothers Karamazov by Fyodor Dostoevksy_</span>
 
-![Web image](https://is5-ssl.mzstatic.com/image/thumb/Publication123/v4/6e/64/6b/6e646b24-17de-f178-d4dd-0b3a34934d2a/PD_Frankensein-Adj.jpg/100000x100000-999.jpg)
+![Web image](https://m.media-amazon.com/images/I/71agR0zF7mL._SL1200_.jpg)
 
 REVIEW COMING SOON
 
