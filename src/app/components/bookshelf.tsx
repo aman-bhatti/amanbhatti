@@ -49,7 +49,16 @@ const getRootCssStyles = (): string[] => {
   ];
 };
 
-const books: Book[] = [
+const books2025: Book[] = [
+  {
+    title: "Moby Dick",
+    author: "Herman Melville",
+    cover: "https://m.media-amazon.com/images/I/61OZaln54CL._SL1500_.jpg",
+    report: "moby_dick.md",
+  },
+];
+
+const books2024: Book[] = [
   {
     title: "1984",
     author: "George Orwell",
@@ -416,11 +425,47 @@ const Bookshelf: React.FC = () => {
       <p className="!text-gray-400 mt-4">
         click on a book for my review on it!
       </p>
+      <h2 className="font-black mt-2">2025</h2>
+
+      <div className="bookshelf">
+        {books2025.map((book, index) => (
+          <div
+            className="book"
+            key={index}
+            onClick={() => handleBookClick(book)}
+          >
+            <div className="side spine">
+              <span
+                className={`spine-title ${
+                  book.spineTitleStyles ? "" : "spine-title"
+                }`}
+                style={book.spineTitleStyles || {}}
+              >
+                {book.title}
+              </span>
+              <span
+                className={`spine-author ${
+                  book.spineAuthorStyles ? "" : "spine-author"
+                }`}
+                style={book.spineAuthorStyles || {}}
+              >
+                {book.author}
+              </span>
+            </div>
+            <div className="side top"></div>
+            <div
+              className="side cover"
+              style={{ backgroundImage: `url(${book.cover})` }}
+            ></div>
+          </div>
+        ))}
+      </div>
+      <hr />
       <div className="bookshelf-container">
         <h2 className="font-black mt-2">2024</h2>
 
         <div className="bookshelf">
-          {books.map((book, index) => (
+          {books2024.map((book, index) => (
             <div
               className="book"
               key={index}
