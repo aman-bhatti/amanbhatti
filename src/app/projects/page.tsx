@@ -12,6 +12,12 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-4 gap-x-12 gap-y-8 pl-4">
           <ProjectCard
+            url="doodlebob"
+            title="doodle.bob"
+            description="A collaborative whiteboard application that allows multiple users to join via code."
+            tech={["Next.js", "Javascript", "React.js"]}
+          />
+          <ProjectCard
             url="sudokutui"
             title="Sudoku TUI"
             description="A TUI application that allows you to play Sudoku right in your terminal through SSH."

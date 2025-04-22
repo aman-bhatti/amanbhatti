@@ -155,6 +155,7 @@ export default async function WorksPage({
 
 export async function generateStaticParams() {
   return [
+    { url: "doodlebob" },
     { url: "sudokutui" },
     { url: "bookrecognition" },
     { url: "notetaking" },
@@ -171,6 +172,27 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
   // Create an object that maps the project URLs to their respective data
   const projectDataMap: { [key: string]: Work } = {
+    doodlebob: {
+      url: "doodlebob",
+      brand: {
+        src: "",
+        alt: "",
+        width: 1000,
+        height: 1000,
+        className: "w-full h-full",
+      },
+      git: "https://github.com/aman-bhatti/doodle.bob",
+      live: "https://doodle-bob.vercel.app",
+      title: "doodle.bob",
+      category: "Full Stack Development",
+      overview:
+        "I created an online collaborative whiteboard that allows multiple users to join and design.",
+      tags: ["NextJS, Javascript, React"],
+      year: "2025 ~",
+      more: "",
+      next: "",
+      nextTitle: "",
+    },
     sudokutui: {
       url: "sudokutui",
       brand: {
