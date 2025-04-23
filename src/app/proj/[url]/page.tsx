@@ -12,6 +12,7 @@ interface Work {
     height: number;
     className: string;
   };
+  videoSrc?: string; // Path to the video file (e.g., /videos/demo.mp4)
   git?: string;
   live?: string;
   title: string;
@@ -50,6 +51,25 @@ export default async function WorksPage({
               height={projects?.brand.height}
               className={projects?.brand.className}
             />
+          </div>
+        </Reveal>
+      )}
+      {/* --- Video Section --- */}
+      {projects?.videoSrc && (
+        <Reveal>
+          <div className="flex justify-center mt-3">
+            {/* Use standard HTML video tag */}
+            <video
+              src={projects.videoSrc}
+              width="1000" // Adjust width as needed or use Tailwind classes
+              // height="auto" // Adjust height or let it be auto
+              controls // Show default video controls (play/pause, volume, etc.)
+              preload="metadata" // Helps browser load basic video info quickly
+              className="w-full h-auto rounded-md" // Style like the image or as desired
+              // You might want 'loop', 'muted', 'autoPlay' depending on the video
+            >
+              Your browser does not support the video tag. {/* Fallback text */}
+            </video>
           </div>
         </Reveal>
       )}
@@ -174,13 +194,7 @@ const fetchWorksData = (url: string): Work => {
   const projectDataMap: { [key: string]: Work } = {
     doodlebob: {
       url: "doodlebob",
-      brand: {
-        src: "",
-        alt: "",
-        width: 1000,
-        height: 1000,
-        className: "w-full h-full",
-      },
+      videoSrc: "/videos/doodlebob.mov",
       git: "https://github.com/aman-bhatti/doodle.bob",
       live: "https://doodle-bob.vercel.app",
       title: "doodle.bob",
