@@ -1,3 +1,9 @@
 .blogname1:hover {
   text-decoration: underline;
 }
+
+@font-face {
+  font-family: "Terminus";
+  src: url("../../../public/fonts/Terminus.ttf") format("ttf");
+  font-display: swap;
+}

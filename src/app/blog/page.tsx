@@ -1,14 +1,6 @@
 import { posts } from "#site/content";
-import { PostItem } from "../components/post-item";
 import { QueryPagination } from "../components/query-pagination";
-import { Tag } from "../components/tag";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "../components/ui/card";
-import { getAllTags, sortPosts, sortTagsByCount } from "../../../lib/utils";
+import { sortPosts } from "../../../lib/utils";
 import { Metadata } from "next";
 import "../styles/blog.css";
 
@@ -35,56 +27,43 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     POSTS_PER_PAGE * currentPage,
   );
 
-  const tags = getAllTags(posts);
-  const sortedTags = sortTagsByCount(tags);
-
   return (
-    <div className="container max-w-4xl py-6 lg:py-10">
-      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
-        <div className="flex-1 space-y-4">
-          <h1 className="inline-block font-black text-4xl lg:text-5xl">Blog</h1>
-          <p className="text-xl text-muted-foreground">these are my blogs.</p>
-        </div>
-      </div>
-      <div className="grid grid-cols-12 gap-3 mt-8">
-        <div className="col-span-12 col-start-1 sm:col-span-8">
-          <hr />
-          {displayPosts?.length > 0 ? (
-            <ul className="flex flex-col">
-              {displayPosts.map((post) => {
-                const { slug, date, title, description, tags } = post;
-                return (
-                  <li key={slug}>
-                    <PostItem
-                      slug={slug}
-                      date={date}
-                      title={title}
-                      description={description}
-                      tags={tags}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            <p>Nothing to see here yet</p>
-          )}
-          <QueryPagination
-            totalPages={totalPages}
-            className="justify-end mt-4"
-          />
-        </div>
-        <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
-          <CardHeader>
-            <CardTitle>Tags</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-wrap gap-2">
-            {sortedTags?.map((tag) => (
-              <Tag tag={tag} key={tag} count={tags[tag]} />
+    <div className="container max-w-3xl py-8 flex flex-row gap-8">
+      {/* Main: Post List */}
+      <main className="flex-1">
+        <h1 className="font-bold text-2xl mb-2 font-terminus">Blog</h1>
+        <p className="text-base text-gray-500 mb-4 font-terminus">
+          these are my blogs.
+        </p>
+        <hr className="mb-4" />
+        {displayPosts?.length > 0 ? (
+          <ol className="space-y-2">
+            {displayPosts.map((post, idx) => (
+              <li key={post.slug} className="flex items-center gap-2 text-base">
+                <span className="text-gray-400 w-6 text-right">
+                  {POSTS_PER_PAGE * (currentPage - 1) + idx + 1}.
+                </span>
+                <a
+                  href={`/${post.slug}`}
+                  className="text-orange-600 hover:underline font-medium font-terminus"
+                >
+                  {post.title}
+                </a>
+                <span className="text-white text-xs ml-2 font-terminus">
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </span>
+              </li>
             ))}
-          </CardContent>
-        </Card>
-      </div>
+          </ol>
+        ) : (
+          <p>Nothing to see here yet</p>
+        )}
+        {/* <QueryPagination totalPages={totalPages} className="justify-end mt-4" /> */}
+      </main>
     </div>
   );
 }
