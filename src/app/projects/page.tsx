@@ -15,7 +15,7 @@ export default function Projects() {
             url="doodlebob"
             title="doodle.bob"
             description="A collaborative whiteboard application that allows multiple users to join via code."
-            tech={["Next.js", "Javascript", "React.js"]}
+            tech={["vitejs", "Javascript", "React.js"]}
           />
           <ProjectCard
             url="sudokutui"
